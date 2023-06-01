@@ -19,7 +19,11 @@ export class SpotifyService {
   });
 
   return this.http.get(url, { headers });
+
+
 }
+
+
 
   getNewReleases() {
  return this.getQuery('browse/new-releases?limit=20')
@@ -36,7 +40,7 @@ export class SpotifyService {
 
 }
 
-getArtista(id:string){
+getArtista( id:string ){
 
   return this.getQuery(`artists/${id}`)
    /*                .pipe(map((data:any) => data['artists'].items
@@ -50,5 +54,7 @@ getTopTracks(id:string){
              .pipe(map((data:any) => data['tracks'] ));
 
 }
+
+
 
 }
